@@ -3,11 +3,15 @@ copy:
 	mkdir collections/ansible_collections/dragon
 	mkdir collections/ansible_collections/dragon/dragon
 	cp -Ra plugins collections/ansible_collections/dragon/dragon/plugins
+	cp -Ra roles collections/ansible_collections/dragon/dragon/roles
+
+run:
+	ANSIBLE_NOCOWS=1 ansible-playbook -i localhost, test.yml
 
 inventory:
 	ansible-inventory -i inventory.dragon.yml --list --export --playbook-dir=. -vvv
 
-stuff: copy inventory
+stuff: copy inventory run
 
 install:
 	ansible-galaxy collection build

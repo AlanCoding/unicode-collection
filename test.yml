@@ -1,0 +1,8 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: false
+
+  roles:
+    # - role: dragon.dragon.🐉
+    - role: dragon.dragon.dragon
