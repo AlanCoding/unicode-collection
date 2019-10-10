@@ -1,0 +1,12 @@
+authors:
+- Alan Rominger (@alancoding)
+- dragons
+dependencies: {}
+description: Makes dragons, tests unicode.
+license:
+- GPL-3.0-only
+name: dragon
+namespace: dragon
+readme: README.md
+tags: ['dragon']
+version: 0.0.1
